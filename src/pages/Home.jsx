@@ -5,6 +5,7 @@ import { MdOutlineFileDownload } from "react-icons/md";
 import { BsArrowRightCircleFill } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
+import ProjectCard from '../components/ProjectCard';
 
 const Home = () => {
 
@@ -46,6 +47,21 @@ const Home = () => {
           </article>
           <article className='service_section_bottom'>
             <ServiceCard limit={3}/>
+          </article>
+        </section>
+        <section className='project_section'>
+          <article className='project_section_top'>
+            <div className='project_section_top_text'>
+              <p>- Projects</p>
+              <h3>My <span>Projects</span></h3>
+            </div>
+            <div className='project_section_top_button' onClick={()=>navigate("/projects")}>
+              <BsArrowRightCircleFill size={28} color='rgba(44, 44, 148, 0.963)'/>
+              <p>View All Projects</p>
+            </div>
+          </article>
+          <article className='project_section_bottom'>
+            <ProjectCard/>
           </article>
         </section>
       </main>
