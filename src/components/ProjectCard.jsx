@@ -10,27 +10,24 @@ const ProjectCard = ({limit}) => {
         {
             id : 1,
             image : ben_university_image,
-            title : "Podcast - Podcast Mobile App Solution",
-            description : "Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            title : "Ben University",
+            description : "We offer top-tier courses in Computer Science, Designing, and Management to help you build the skills you need to excel in today's competitive world.",
             pathToProject : "https://benjiggy.github.io/",
             tools : [
                 {
-                    theTool : "UI/UX Design"
-                },
-                {
-                    theTool : "App Design"
+                    theTool : "Full stack"
                 },
             ]
         },
         {
             id : 2,
             image : compassionate_health_care_service_image,
-            title : "Podcast - Podcast Mobile App Solution",
-            description : "Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            title : "Compassionate Health care service ",
+            description : "compassionate-health-care-service offers an affordable and most appropriate home care services. We commit the patient and family experience to our mission and activities by establishing personalized non- medical care plans.",
             pathToProject : "https://compassionate-health-care-service.vercel.app/",
             tools : [
                 {
-                    theTool : "Frontend Development"
+                    theTool : "Frontend Web Development"
                 },
             ]
         },

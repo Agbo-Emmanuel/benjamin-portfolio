@@ -54,7 +54,7 @@ const Footer = () => {
                 <div className='footer_navigation_container'>
                     <h3>Contact</h3>
                     <span><FaWhatsapp/>+234 9072 1461 68</span>
-                    <span><FaPhoneAlt/>090 721 4616 8</span>
+                    <span><FaPhoneAlt/>070 179 038 01</span>
                     <span><MdMailOutline/>benjiwezzy@gmail.com</span>
                 </div>
             </div>
