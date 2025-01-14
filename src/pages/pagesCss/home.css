@@ -435,6 +435,11 @@
         margin-top: 20px;
     }
 
+    .hero_text_section h1{
+        color: #f6f6f6;
+        font-size: 30px;
+    }
+
     .hero_button_container{
         gap: 18px;
         flex-direction: column;

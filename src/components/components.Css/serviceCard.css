@@ -41,4 +41,8 @@
         width: 90%;
     }
 
+    .service_card_body h3{
+        font-size: 24px;
+    }
+
 }
