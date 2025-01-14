@@ -26,7 +26,7 @@ const Footer = () => {
             </div>
             <div className='footer_bottom'>
                 <div className='footer_description_container'>
-                    <div className='footer_logo_container'>
+                    <div className='footer_logo_container' onClick={()=>navigate("/")}>
                         <img src={header_logo} alt='logo'/>
                         <p>Benjamin</p>
                     </div>
