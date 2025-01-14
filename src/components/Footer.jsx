@@ -14,12 +14,20 @@ const Footer = () => {
 
     const navigate = useNavigate()
 
+    function downloadResume(){
+        const fileUrl = '../../public/benjaminResume.pdf';
+        const link = document.createElement('a');
+        link.href = fileUrl;
+        link.download = 'benjamin-resume.pdf';
+        link.click();
+    }
+
   return (
     <>
         <div className='footer_body'>
             <div className='footer_top'>
                 <h1>Want to <span>Learn</span> More <span>About Me?</span></h1>
-                <button>
+                <button onClick={downloadResume}>
                     <p>Download Resume</p>
                     <MdOutlineFileDownload size={20} color='#fff'/>
                 </button>

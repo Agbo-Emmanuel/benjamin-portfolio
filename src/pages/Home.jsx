@@ -15,7 +15,11 @@ const Home = () => {
   const navigate = useNavigate()
 
   function downloadResume(){
-    window.open('')
+    const fileUrl = '../../public/benjaminResume.pdf';
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.download = 'benjamin-resume.pdf';
+    link.click();
   }
 
   return (
