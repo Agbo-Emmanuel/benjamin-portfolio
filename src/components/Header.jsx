@@ -46,8 +46,10 @@ const Header = () => {
           <p>Benjamin</p>
         </div>
         <div className='header_nav_container'>
+          <NavLink to='/' className={({ isActive })=> isActive ? "nav_active" : "nav_notactive"}>Home</NavLink>
           <NavLink to='/services' className={({ isActive })=> isActive ? "nav_active" : "nav_notactive"}>Services</NavLink>
           <NavLink to='/projects' className={({ isActive })=> isActive ? "nav_active" : "nav_notactive"}>My Projects</NavLink>
+          <NavLink to='/contact' className={({ isActive })=> isActive ? "nav_active" : "nav_notactive"}>Contact me</NavLink>
           <a href='https://wa.me/2349072146168' target='_blank' className='header_icon'><FaWhatsapp/></a>
           <a href='https://github.com/Benjiggy' target='_blank' className='header_icon'><FaGithub/></a>
           <a href='https://twitter.com/@Darkseid843276' target='_blank' className='header_icon'><FaXTwitter/></a>
@@ -60,8 +62,9 @@ const Header = () => {
         </div>
         <div ref={menuContainer} className={`menu_container ${menuActive == true ? "visible" : null}`}>
           <NavLink to='/' className="menu_links" onClick={()=>setMenuActive(false)}>Home</NavLink>
-          <NavLink to='/projects' className="menu_links" onClick={()=>setMenuActive(false)}>My Projects</NavLink>
           <NavLink to='/services' className="menu_links" onClick={()=>setMenuActive(false)}>Services</NavLink>
+          <NavLink to='/projects' className="menu_links" onClick={()=>setMenuActive(false)}>My Projects</NavLink>
+          <NavLink to='/contact' className="menu_links" onClick={()=>setMenuActive(false)}>Contact me</NavLink>
           <div className='menu_social_icon_container'>
             <a href='https://wa.me/2349072146168' target='_blank' className="menu_links" onClick={()=>setMenuActive(false)}><FaWhatsapp/></a>
             <a href='https://github.com/Benjiggy' target='_blank' className="menu_links" onClick={()=>setMenuActive(false)}><FaGithub/></a>

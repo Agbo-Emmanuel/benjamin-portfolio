@@ -2,6 +2,7 @@ import React from 'react'
 import './components.Css/projectCard.css'
 import ben_university_image from '../assets/ben_university_image.png'
 import compassionate_health_care_service_image from '../assets/compassionate_health_care_service_image.png'
+import { motion, stagger } from "framer-motion";
 
 const ProjectCard = ({limit}) => {
 
@@ -41,7 +42,24 @@ const ProjectCard = ({limit}) => {
     <>
         {
             projectDataToDisplay.map((e)=>(
-                <div className='project_card_body'>
+                <motion.div 
+                    initial={{
+                        opacity: 0,
+                        y: 100,
+                    }}
+                    transition={{
+                        type: "spring",
+                        stiffness: 30,
+                        mass: 1.5,
+                    }}
+                    // animate={{ opacity: 1, y: 0 }}
+                    whileInView={{
+                        opacity: 1,
+                        y: 0,
+                        //   delay: stagger(0.05),
+                    }}
+                    viewport={{ margin: "-40px", once: "true" }}
+                    className='project_card_body'>
                     <div className='project_card_image'>
                         <img src={e.image} alt='image'/>
                     </div>
@@ -57,7 +75,7 @@ const ProjectCard = ({limit}) => {
                         <p>{e.description}</p>
                         <button onClick={() => window.open(e.pathToProject, '_blank')}><p>View Project</p></button>
                     </div>
-                </div>
+                </motion.div>
             ))
         }
     </>

@@ -6,9 +6,10 @@ import { BsArrowRightCircleFill } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
 import ProjectCard from '../components/ProjectCard';
-import { FaHtml5, FaCss3Alt, FaPython } from "react-icons/fa";
-import { SiJavascript } from "react-icons/si";
-import { DiJava } from "react-icons/di";
+// import { FaHtml5, FaCss3Alt, FaPython } from "react-icons/fa";
+// import { SiJavascript } from "react-icons/si";
+// import { DiJava } from "react-icons/di";
+import { motion, stagger } from "framer-motion";
 
 const Home = () => {
 
@@ -26,7 +27,24 @@ const Home = () => {
     <>
       <main className='home_body'>
         <section className='hero_section'>
-          <div className='hero_text_section'>
+          <motion.div 
+            initial={{
+              opacity: 0,
+              x: -100,
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 30,
+              mass: 1.5,
+            }}
+            // animate={{ opacity: 1, y: 0 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              //   delay: stagger(0.05),
+            }}
+            viewport={{ margin: "-40px", once: "true" }}
+            className='hero_text_section'>
             <p>Welcome to my site</p>
             <h1>Hi, I'm Benjamin, a <span>Backend</span>,<span>Full-stack</span> and <span>Mobile developer</span></h1>
             <p>
@@ -40,10 +58,27 @@ const Home = () => {
               <button onClick={downloadResume}><p>Download Resume</p><MdOutlineFileDownload size={20} color='#fff'/></button>
               <button onClick={()=>navigate("/projects")}><p>See My Projects</p></button>
             </div>
-          </div>
-          <div className='hero_image_section'>
+          </motion.div>
+          <motion.div 
+            initial={{
+              opacity: 0,
+              x: 100,
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 30,
+              mass: 1.5,
+            }}
+            // animate={{ opacity: 1, y: 0 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              //   delay: stagger(0.05),
+            }}
+            viewport={{ margin: "-40px", once: "true" }}
+            className='hero_image_section'>
             <img src={hero_image} alt='image'/>
-          </div>
+          </motion.div>
         </section>
         <section className='service_section'>
           <article className='service_section_top'>
@@ -84,11 +119,45 @@ const Home = () => {
           </article>
         </section>
         <section className='contact_section'>
-          <article className='contact_section_text_container'>
+          <motion.article 
+            initial={{
+              opacity: 0,
+              y: 100,
+            }}
+            transition={{
+                type: "spring",
+                stiffness: 30,
+                mass: 1.5,
+            }}
+            // animate={{ opacity: 1, y: 0 }}
+            whileInView={{
+                opacity: 1,
+                y: 0,
+                //   delay: stagger(0.05),
+            }}
+            viewport={{ margin: "-40px", once: "true" }}
+            className='contact_section_text_container'>
             <h1>Let's <span>Connect</span> & <span>Collaborate</span></h1>
             <p>If you're looking to hire or collaborate on exciting projects, feel free to send me a message!</p>
-          </article>
-          <article className='contact_section_input_container'>
+          </motion.article>
+          <motion.article 
+            initial={{
+              opacity: 0,
+              y: 100,
+            }}
+            transition={{
+                type: "spring",
+                stiffness: 30,
+                mass: 1.5,
+            }}
+            // animate={{ opacity: 1, y: 0 }}
+            whileInView={{
+                opacity: 1,
+                y: 0,
+                //   delay: stagger(0.05),
+            }}
+            viewport={{ margin: "-40px", once: "true" }}
+            className='contact_section_input_container'>
             <input
               type='text'
               placeholder='Full name/Company Name'
@@ -105,7 +174,7 @@ const Home = () => {
               <BsArrowRightCircleFill size={28} color='rgba(44, 44, 148, 0.963)'/>
               <p>Send message</p>
             </div>
-          </article>
+          </motion.article>
         </section>
       </main>
     </>

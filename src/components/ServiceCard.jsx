@@ -7,6 +7,7 @@ import { FaCode } from "react-icons/fa";
 import { MdWeb } from "react-icons/md";
 // import { FaLaptopCode } from "react-icons/fa";
 // import { FaReact } from "react-icons/fa";
+import { motion, stagger } from "framer-motion";
 
 const ServiceCard = ({limit}) => {
 
@@ -34,12 +35,30 @@ const ServiceCard = ({limit}) => {
     <>
         {
             serviceDataToDisplay.map((e)=>(
-                <div key={e.id} className='service_card_body'>
+                <motion.div 
+                    initial={{
+                        opacity: 0,
+                        y: -100,
+                    }}
+                    transition={{
+                        type: "spring",
+                        stiffness: 30,
+                        mass: 1.5,
+                    }}
+                    // animate={{ opacity: 1, y: 0 }}
+                    whileInView={{
+                        opacity: 1,
+                        y: 0,
+                        //   delay: stagger(0.05),
+                    }}
+                    viewport={{ margin: "-40px", once: "true" }}
+                    key={e.id} 
+                    className='service_card_body'>
                     <div className='service_card_icon'>
                         {e.icon}
                     </div>
                     <h3>{e.service}</h3>
-                </div>
+                </motion.div>
             ))
         }
     </>
