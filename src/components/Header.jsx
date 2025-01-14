@@ -46,8 +46,8 @@ const Header = () => {
           <p>Benjamin</p>
         </div>
         <div className='header_nav_container'>
-          <NavLink to='/projects' className={({ isActive })=> isActive ? "nav_active" : "nav_notactive"}>My Projects</NavLink>
           <NavLink to='/services' className={({ isActive })=> isActive ? "nav_active" : "nav_notactive"}>Services</NavLink>
+          <NavLink to='/projects' className={({ isActive })=> isActive ? "nav_active" : "nav_notactive"}>My Projects</NavLink>
           <a href='https://wa.me/2349072146168' target='_blank' className='header_icon'><FaWhatsapp/></a>
           <a href='https://github.com/Benjiggy' target='_blank' className='header_icon'><FaGithub/></a>
           <a href='https://twitter.com/@Darkseid843276' target='_blank' className='header_icon'><FaXTwitter/></a>

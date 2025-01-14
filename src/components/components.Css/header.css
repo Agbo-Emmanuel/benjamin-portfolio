@@ -97,7 +97,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    clip-path: circle(11% at right top);
+    clip-path: circle(14% at right top);
     transition: clip-path 500ms;
 }
 

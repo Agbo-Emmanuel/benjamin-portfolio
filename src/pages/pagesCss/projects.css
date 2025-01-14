@@ -1,3 +1,55 @@
 .projects_body{
     width: 100%;
 }
+
+.project_hero{
+    width: 100%;
+    height: max-content;
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project_hero h1{
+    color: #fff;
+    font-size: 34px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+.project_hero h1 span{
+    color: blue;
+}
+
+.project_hero p{
+    color: #fff;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.project_card_container_section{
+    width: 100%;
+    padding: 20px 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+}
+
+
+@media screen and (max-width: 768px){
+
+    .project_hero{
+        text-align: center;
+        gap: 4px;
+        padding: 20px 0px;
+    }
+
+    .project_card_container_section{
+        width: 100%;
+        padding: 20px 16px;
+    }
+
+}
