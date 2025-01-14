@@ -5,16 +5,18 @@ import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import Service from './pages/Service'
+import ScrollToTop from './ScrollToTop'
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop/>
         <Routes>
           <Route element={<Landing/>}>
             <Route path='/' element={<Home/>}/>
             <Route path='/projects' element={<Projects/>}/>
-            <Route path='/contact-me' element={<Contact/>}/>
+            <Route path='/contact' element={<Contact/>}/>
             <Route path='/services' element={<Service/>}/>
           </Route>
         </Routes>

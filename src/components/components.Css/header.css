@@ -71,3 +71,80 @@
     color: #fff;
     cursor: pointer;
 }
+
+.menu_icon_container{
+    width: max-content;
+    height: max-content;
+    font-size: 30px;
+    color: #fff;
+    display: none;
+    z-index: 9;
+}
+
+.menu_container{
+    width: 100%;
+    height: 100vh;
+    padding: 16px;
+    background-color: rgb(58, 58, 210);
+    position: absolute;
+    z-index: 1;
+    bottom: 0px;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    clip-path: circle(17% at right top);
+    transition: clip-path 500ms;
+}
+
+.menu_container.visible{
+    clip-path: circle(100%);
+}
+
+.menu_links{
+    font-size: 24px;
+    font-family: "Poppins",sans-serif;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 500ms, opacity 500ms;
+}
+
+.menu_container.visible .menu_links{
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu_social_icon_container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .header_body{
+        padding: 16px 16px;
+    }
+
+    .header_nav_container{
+        display: none;
+    }
+
+    .menu_icon_container{
+        display: flex;
+    }
+
+}

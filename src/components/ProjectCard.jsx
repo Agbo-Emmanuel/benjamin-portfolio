@@ -39,7 +39,9 @@ const ProjectCard = ({limit}) => {
         {
             projectDataToDisplay.map((e)=>(
                 <div className='project_card_body'>
-                    <div className='project_card_image'></div>
+                    <div className='project_card_image'>
+                        <img src='' alt='image'/>
+                    </div>
                     <div className='project_card_details'>
                         <div className='project_card_tools'>
                             {
@@ -50,6 +52,7 @@ const ProjectCard = ({limit}) => {
                         </div>
                         <h3>{e.title}</h3>
                         <p>{e.description}</p>
+                        <button><p>View Project</p></button>
                     </div>
                 </div>
             ))

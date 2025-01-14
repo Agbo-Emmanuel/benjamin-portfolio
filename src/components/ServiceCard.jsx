@@ -1,17 +1,29 @@
 import React from 'react'
 import './components.Css/serviceCard.css'
+import { RiMobileDownloadFill } from "react-icons/ri";
+import { MdOutlineCameraFront } from "react-icons/md";
+import { FaCode } from "react-icons/fa";
+// import { AiOutlineCode } from "react-icons/ai";
+import { MdWeb } from "react-icons/md";
+// import { FaLaptopCode } from "react-icons/fa";
+// import { FaReact } from "react-icons/fa";
 
 const ServiceCard = ({limit}) => {
 
     const serviceData = [
         {
             id : 1,
-            icon : "",
+            icon : <FaCode/>,
             service : "Backend Web Development"
         },
         {
             id : 2,
-            icon : "",
+            icon : <MdWeb/>,
+            service : "Frontend Web Development"
+        },
+        {
+            id : 2,
+            icon : <RiMobileDownloadFill/>,
             service : "Mobile App Development"
         },
     ]
@@ -23,7 +35,9 @@ const ServiceCard = ({limit}) => {
         {
             serviceDataToDisplay.map((e)=>(
                 <div key={e.id} className='service_card_body'>
-                    <div className='service_card_icon'></div>
+                    <div className='service_card_icon'>
+                        {e.icon}
+                    </div>
                     <h3>{e.service}</h3>
                 </div>
             ))

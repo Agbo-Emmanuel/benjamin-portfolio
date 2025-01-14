@@ -11,15 +11,21 @@
 }
 
 .project_card_image{
-    width: 50%;
+    width: 46%;
     height: 320px;
     background-color: green;
     border-radius: 14px;
 }
 
+.project_card_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .project_card_details{
-    width: 40%;
-    height: 200px;
+    width: 46%;
+    height: max-content;
     /* background-color: red; */
     display: flex;
     flex-direction: column;
@@ -55,4 +61,76 @@
     font-size: 16px;
     font-family: "Quicksand", sans-serif;
     font-weight: 500;
+}
+
+.project_card_details button{
+    width: max-content;
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 1px solid rgba(211, 211, 211, 0.533);
+    /* overflow: hidden; */
+    position: relative;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+
+.project_card_details button p{
+    color: #e4e4e4;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    position: relative;
+    z-index: 2;
+}
+
+.project_card_details button:before{
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: blue;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+.project_card_details button:hover, .project_card_details button p:hover{
+    border: none;
+    color: #fff;
+}
+
+.project_card_details button:hover:before {
+    width: 100%;
+}
+
+
+
+
+
+@media screen and (max-width: 768px){
+
+    .project_card_body{
+        flex-direction: column;
+    }
+
+    .project_card_image{
+        width: 100%;
+        height: 300px;
+    }
+
+    .project_card_details{
+        width: 100%;
+    }
+
+    .project_card_details h3{
+        font-size: 28px;
+    }
+    
+    .project_card_details p{
+        font-size: 14px;
+    }
+
 }

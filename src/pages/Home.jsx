@@ -6,10 +6,17 @@ import { BsArrowRightCircleFill } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
 import ProjectCard from '../components/ProjectCard';
+import { FaHtml5, FaCss3Alt, FaPython } from "react-icons/fa";
+import { SiJavascript } from "react-icons/si";
+import { DiJava } from "react-icons/di";
 
 const Home = () => {
 
   const navigate = useNavigate()
+
+  function downloadResume(){
+    window.open('')
+  }
 
   return (
     <>
@@ -26,8 +33,8 @@ const Home = () => {
               complex technical projects.
             </p>
             <div className='hero_button_container'>
-              <button><p>Download Resume</p><MdOutlineFileDownload size={20} color='#fff'/></button>
-              <button><p>See My Projects</p></button>
+              <button onClick={downloadResume}><p>Download Resume</p><MdOutlineFileDownload size={20} color='#fff'/></button>
+              <button onClick={()=>navigate("/projects")}><p>See My Projects</p></button>
             </div>
           </div>
           <div className='hero_image_section'>
@@ -47,6 +54,10 @@ const Home = () => {
           </article>
           <article className='service_section_bottom'>
             <ServiceCard limit={3}/>
+            <div className='service_section_top_button mobileShow' onClick={()=>navigate("/services")}>
+              <BsArrowRightCircleFill size={28} color='rgba(44, 44, 148, 0.963)'/>
+              <p>View All Services</p>
+            </div>
           </article>
         </section>
         <section className='project_section'>
@@ -62,6 +73,34 @@ const Home = () => {
           </article>
           <article className='project_section_bottom'>
             <ProjectCard/>
+            <div className='project_section_top_button mobileShow' onClick={()=>navigate("/projects")}>
+              <BsArrowRightCircleFill size={28} color='rgba(44, 44, 148, 0.963)'/>
+              <p>View All Projects</p>
+            </div>
+          </article>
+        </section>
+        <section className='contact_section'>
+          <article className='contact_section_text_container'>
+            <h1>Let's <span>Connect</span> & <span>Collaborate</span></h1>
+            <p>If you're looking to hire or collaborate on exciting projects, feel free to send me a message!</p>
+          </article>
+          <article className='contact_section_input_container'>
+            <input
+              type='text'
+              placeholder='Full name/Company Name'
+            />
+            <input
+              type='email'
+              placeholder='Email'
+            />
+            <textarea
+              type='text'
+              placeholder='Message'
+            />
+            <div className='contact_section_input_container_button'>
+              <BsArrowRightCircleFill size={28} color='rgba(44, 44, 148, 0.963)'/>
+              <p>Send message</p>
+            </div>
           </article>
         </section>
       </main>
