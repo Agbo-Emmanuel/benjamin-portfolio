@@ -3,6 +3,7 @@ import './components.Css/projectCard.css'
 import ben_university_image from '../assets/ben_university_image.png'
 import compassionate_health_care_service_image from '../assets/compassionate_health_care_service_image.png'
 import ibkr_image from '../assets/ibkr_image.png'
+import blackfinance_image from '../assets/blackfinance_image.png'
 import { motion, stagger } from "framer-motion";
 
 const ProjectCard = ({limit}) => {
@@ -37,6 +38,18 @@ const ProjectCard = ({limit}) => {
             image : ibkr_image,
             title : "Interactive broker",
             description : "A modern investment platform designed to help users manage their funds efficiently. The website allows users to deposit, withdraw, and invest in various plans while tracking their profits in real time",
+            pathToProject : "",
+            tools : [
+                {
+                    theTool : "Backend Web Development"
+                },
+            ]
+        },
+        {
+            id : 4,
+            image : blackfinance_image,
+            title : "Black-finance",
+            description : "A dynamic and secure investment platform that allows users to deposit funds, purchase investment plans, and track their earnings in real-time.",
             pathToProject : "",
             tools : [
                 {
