@@ -36,7 +36,7 @@ const ProjectCard = ({limit}) => {
         {
             id : 3,
             image : ibkr_image,
-            title : "Interactive broker",
+            title : "Broker 1",
             description : "A modern investment platform designed to help users manage their funds efficiently. The website allows users to deposit, withdraw, and invest in various plans while tracking their profits in real time",
             pathToProject : "",
             tools : [
@@ -48,7 +48,7 @@ const ProjectCard = ({limit}) => {
         {
             id : 4,
             image : blackfinance_image,
-            title : "Black-finance",
+            title : "Broker 2",
             description : "A dynamic and secure investment platform that allows users to deposit funds, purchase investment plans, and track their earnings in real-time.",
             pathToProject : "",
             tools : [
