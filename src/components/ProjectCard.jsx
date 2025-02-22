@@ -4,6 +4,7 @@ import ben_university_image from '../assets/ben_university_image.png'
 import compassionate_health_care_service_image from '../assets/compassionate_health_care_service_image.png'
 import ibkr_image from '../assets/ibkr_image.png'
 import blackfinance_image from '../assets/blackfinance_image.png'
+import rbnc_mobile_image from '../assets/rbnc_mobile_image.jpg'
 import { motion, stagger } from "framer-motion";
 
 const ProjectCard = ({limit}) => {
@@ -31,6 +32,15 @@ const ProjectCard = ({limit}) => {
                 {
                     theTool : "Frontend Web Development"
                 },
+                {
+                    theTool : "Html"
+                },
+                {
+                    theTool : "Css"
+                },
+                {
+                    theTool : "JavaScript"
+                },
             ]
         },
         {
@@ -43,6 +53,12 @@ const ProjectCard = ({limit}) => {
                 {
                     theTool : "Backend Web Development"
                 },
+                {
+                    theTool : "Node.js"
+                },
+                {
+                    theTool : "MongoDb"
+                },
             ]
         },
         {
@@ -54,6 +70,45 @@ const ProjectCard = ({limit}) => {
             tools : [
                 {
                     theTool : "Backend Web Development"
+                },
+                {
+                    theTool : "Node.js"
+                },
+                {
+                    theTool : "MongoDb"
+                },
+            ]
+        },
+        {
+            id : 5,
+            image : rbnc_mobile_image,
+            title : "RealLook",
+            description : "I developed a mobile application built using Dart and Flutter, designed e-commerce The app provides a seamless user experience with a responsive and intuitive UI, ensuring smooth navigation across different devices and screen sizes.",
+            pathToProject : "",
+            tools : [
+                {
+                    theTool : "Mobile development"
+                },
+                {
+                    theTool : "Dart"
+                },
+                {
+                    theTool : "Flutter"
+                },
+                {
+                    theTool : "Firebase"
+                },
+                {
+                    theTool : "Node.js"
+                },
+                {
+                    theTool : "Firestore"
+                },
+                {
+                    theTool : "SQLite"
+                },
+                {
+                    theTool : "MySQL"
                 },
             ]
         },

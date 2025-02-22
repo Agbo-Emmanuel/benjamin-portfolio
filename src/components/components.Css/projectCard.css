@@ -42,6 +42,7 @@
     width: 100%;
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .project_card_tools h5{

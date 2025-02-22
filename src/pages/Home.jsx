@@ -6,10 +6,12 @@ import { BsArrowRightCircleFill } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
 import ProjectCard from '../components/ProjectCard';
-// import { FaHtml5, FaCss3Alt, FaPython } from "react-icons/fa";
-// import { SiJavascript } from "react-icons/si";
-// import { DiJava } from "react-icons/di";
 import { motion, stagger } from "framer-motion";
+// import { MdOutlineFileDownload } from "react-icons/md";
+// import { BsArrowRightCircleFill } from "react-icons/bs";
+import { FaHtml5, FaCss3Alt, FaReact, FaGitAlt, FaGithubSquare } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io5";
+import { RiTailwindCssFill } from "react-icons/ri";
 
 const Home = () => {
 
@@ -99,6 +101,34 @@ const Home = () => {
             </div>
           </article>
         </section>
+        <section className='tech_skill_section'>
+          <article className='tech_skill_text_container'>
+            <h3>My Tech Skills</h3>
+            <p>Explore My Programming Skills</p>
+          </article>
+          <article className='tech_skill_items_container'>
+            <div className='tech_skill'>
+              <FaHtml5 color='#fff' size={100}/>
+              <p>Html</p>
+            </div>
+            <div className='tech_skill'>
+              <FaCss3Alt color='#fff' size={100}/>
+              <p>Css</p>
+            </div>
+            <div className='tech_skill'>
+              <IoLogoJavascript color='#fff' size={100}/>
+              <p>Javascript</p>
+            </div>
+            <div className='tech_skill'>
+              <FaGitAlt color='#fff' size={100}/>
+              <p>Git</p>
+            </div>
+            <div className='tech_skill'>
+              <FaGithubSquare color='#fff' size={100}/>
+              <p>Github</p>
+            </div>
+          </article>
+        </section>
         <section className='project_section'>
           <article className='project_section_top'>
             <div className='project_section_top_text'>
@@ -111,7 +141,7 @@ const Home = () => {
             </div>
           </article>
           <article className='project_section_bottom'>
-            <ProjectCard/>
+            <ProjectCard limit={3}/>
             <div className='project_section_top_button mobileShow' onClick={()=>navigate("/projects")}>
               <BsArrowRightCircleFill size={28} color='rgba(44, 44, 148, 0.963)'/>
               <p>View All Projects</p>
