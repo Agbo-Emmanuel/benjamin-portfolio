@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './pagesCss/home.css'
 import hero_image from '../assets/hero_image.png'
 import { MdOutlineFileDownload } from "react-icons/md";
@@ -16,6 +16,8 @@ import { DiMongodb } from "react-icons/di";
 import { TbBrandReactNative, TbSql } from "react-icons/tb"
 import { SiMysql, SiAndroidstudio } from "react-icons/si";
 import { FaFlutter, FaDartLang } from "react-icons/fa6";
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const Home = () => {
 
@@ -28,6 +30,34 @@ const Home = () => {
     link.download = 'benjamin-resume.pdf';
     link.click();
   }
+
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+  const [loading, setLoading] = useState(false)
+
+  async function sendMessage(){
+    const url = "https://benjamin-portfolio-backend.onrender.com/api/v1/send-mail-to-admin"
+    const body = {name:name, email:email, message:message}
+    try {
+      setLoading(true)
+      const response = await axios.post(url,body)
+      setLoading(false)
+      console.log(response)
+      setName("")
+      setEmail("")
+      setMessage("")
+      toast.success(response.data.success)
+      
+    } catch (error) {
+      setLoading(false)
+      console.log(error)
+      {
+        error.message == "Network Error" ? toast.error("Network error: pls check your internet connection") : toast.error(error.response.data.error)
+      }
+    }
+  }
+
 
   return (
     <>
@@ -231,18 +261,24 @@ const Home = () => {
             <input
               type='text'
               placeholder='Full name/Company Name'
+              value={name}
+              onChange={(e)=>setName(e.target.value)}
             />
             <input
               type='email'
               placeholder='Email'
+              value={email}
+              onChange={(e)=>setEmail(e.target.value)}
             />
             <textarea
               type='text'
               placeholder='Message'
+              value={message}
+              onChange={(e)=>setMessage(e.target.value)}
             />
-            <div className='contact_section_input_container_button'>
+            <div className='contact_section_input_container_button' onClick={sendMessage}>
               <BsArrowRightCircleFill size={28} color='rgba(44, 44, 148, 0.963)'/>
-              <p>Send message</p>
+              <p>{loading == true ? "loading" : "Send message"}</p>
             </div>
           </motion.article>
         </section>

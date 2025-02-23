@@ -23,7 +23,7 @@ const ServiceCard = ({limit}) => {
             service : "Frontend Web Development"
         },
         {
-            id : 2,
+            id : 3,
             icon : <RiMobileDownloadFill/>,
             service : "Mobile App Development"
         },

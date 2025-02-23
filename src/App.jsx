@@ -6,6 +6,7 @@ import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import Service from './pages/Service'
 import ScrollToTop from './ScrollToTop'
+import { ToastContainer } from 'react-toastify'
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           </Route>
         </Routes>
       </BrowserRouter>
+      <ToastContainer />
     </>
   )
 }
