@@ -9,9 +9,13 @@ import ProjectCard from '../components/ProjectCard';
 import { motion, stagger } from "framer-motion";
 // import { MdOutlineFileDownload } from "react-icons/md";
 // import { BsArrowRightCircleFill } from "react-icons/bs";
-import { FaHtml5, FaCss3Alt, FaReact, FaGitAlt, FaGithubSquare } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaReact, FaGitAlt, FaGithubSquare, FaNode } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
-import { RiTailwindCssFill } from "react-icons/ri";
+// import { RiTailwindCssFill } from "react-icons/ri";
+import { DiMongodb } from "react-icons/di";
+import { TbBrandReactNative, TbSql } from "react-icons/tb"
+import { SiMysql, SiAndroidstudio } from "react-icons/si";
+import { FaFlutter, FaDartLang } from "react-icons/fa6";
 
 const Home = () => {
 
@@ -108,24 +112,60 @@ const Home = () => {
           </article>
           <article className='tech_skill_items_container'>
             <div className='tech_skill'>
-              <FaHtml5 color='#fff' size={100}/>
+              <FaHtml5 className='tech_skill_icon'/>
               <p>Html</p>
             </div>
             <div className='tech_skill'>
-              <FaCss3Alt color='#fff' size={100}/>
+              <FaCss3Alt className='tech_skill_icon'/>
               <p>Css</p>
             </div>
             <div className='tech_skill'>
-              <IoLogoJavascript color='#fff' size={100}/>
+              <IoLogoJavascript className='tech_skill_icon'/>
               <p>Javascript</p>
             </div>
             <div className='tech_skill'>
-              <FaGitAlt color='#fff' size={100}/>
+              <FaReact className='tech_skill_icon'/>
+              <p>React</p>
+            </div>
+            <div className='tech_skill'>
+              <FaGitAlt className='tech_skill_icon'/>
               <p>Git</p>
             </div>
             <div className='tech_skill'>
-              <FaGithubSquare color='#fff' size={100}/>
+              <FaGithubSquare className='tech_skill_icon'/>
               <p>Github</p>
+            </div>
+            <div className='tech_skill'>
+              <DiMongodb className='tech_skill_icon'/>
+              <p>Mongodb</p>
+            </div>
+            <div className='tech_skill'>
+              <FaNode className='tech_skill_icon'/>
+              <p>Node.js</p>
+            </div>
+            <div className='tech_skill'>
+              <TbBrandReactNative className='tech_skill_icon'/>
+              <p>React Native</p>
+            </div>
+            <div className='tech_skill'>
+              <SiMysql className='tech_skill_icon'/>
+              <p>MySQL</p>
+            </div>
+            <div className='tech_skill'>
+              <SiMysql className='tech_skill_icon'/>
+              <p>sql</p>
+            </div>
+            <div className='tech_skill'>
+              <FaFlutter className='tech_skill_icon'/>
+              <p>Flutter</p>
+            </div>
+            <div className='tech_skill'>
+              <FaDartLang className='tech_skill_icon'/>
+              <p>Dart</p>
+            </div>
+            <div className='tech_skill'>
+              <SiAndroidstudio className='tech_skill_icon'/>
+              <p>Android</p>
             </div>
           </article>
         </section>

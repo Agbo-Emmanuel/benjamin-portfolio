@@ -273,6 +273,11 @@
     text-align: center;
 }
 
+.tech_skill_icon{
+    font-size: 100px;
+    color: #fff;
+}
+
 .tech_skill p{
     color: #ffffff;
     font-size: 18px;
@@ -571,6 +576,40 @@
 
     .contact_section_input_container{
         width: 100%;
+    }
+
+    .tech_skill_section{
+        padding: 0px 16px;
+        margin: 40px 0px;
+        gap: 40px;
+    }
+
+    .tech_skill_text_container{
+        gap: 6px;
+    }
+    
+    .tech_skill_text_container h3{
+        font-size: 34px;
+    }
+    
+    .tech_skill_text_container p{
+        font-size: 24px;
+    }
+    
+    .tech_skill_items_container{
+        gap: 20px;
+    }
+    
+    .tech_skill{
+        gap: 10px;
+    }
+
+    .tech_skill_icon{
+        font-size: 80px;
+    }
+    
+    .tech_skill p{
+        font-size: 16px;
     }
 
 }
