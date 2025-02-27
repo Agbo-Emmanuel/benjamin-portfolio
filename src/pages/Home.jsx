@@ -23,12 +23,14 @@ const Home = () => {
 
   const navigate = useNavigate()
 
-  function downloadResume(){
-    const fileUrl = '../../public/benjaminResume.pdf';
+  function downloadResume() {
+    const fileUrl = '/benjaminResume.pdf'; // Accessing from the public folder
     const link = document.createElement('a');
     link.href = fileUrl;
     link.download = 'benjamin-resume.pdf';
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
   }
 
   const [name, setName] = useState("")
