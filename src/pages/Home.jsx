@@ -24,7 +24,7 @@ const Home = () => {
   const navigate = useNavigate()
 
   function downloadResume() {
-    const fileUrl = '/benjaminResume.pdf'; // Accessing from the public folder
+    const fileUrl = '/Benjamin-resume.pdf'; // Accessing from the public folder
     const link = document.createElement('a');
     link.href = fileUrl;
     link.download = 'benjamin-resume.pdf';
